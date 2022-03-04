@@ -10,7 +10,7 @@ Problem 2:
 
   I based my approach to this problem on the code I wrote for the first problem. I managed to adapt the code by removing the cupcake eating logic and replacing it with the available/busy flag logic. The runtime of this algorithim is much faster then the first I believe this is because the guest don't do much in the room aka their is very little code that each thread has to excute. I ensured the validaty of my algorithim through the same method as the first problem. As I increased the number of guest I saw an exponential increase in runtime.
 
-
+<br>
 
 To run my programs first navigate to directory with the two java files then enter the following commands in your terminal:
 
