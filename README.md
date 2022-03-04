@@ -14,8 +14,8 @@ Problem 2:<br>
 
 To run my programs first navigate to directory with the two java files then enter the following commands in your terminal:
 
-javac Cupcake.java
+javac Cupcake.java<br>
 java Cupcake
 
-javac CrystalVase.java
+javac CrystalVase.java<br>
 java CrystalVase
