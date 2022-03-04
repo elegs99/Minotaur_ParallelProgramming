@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.*;
 
 public class Cupcake {
   public static void main(String[] args) {
-    int nGuests = 1000;
+    int nGuests = 10000;
     int totalCakesEaten = 0;
     final AtomicBoolean cupcakeIsThere = new AtomicBoolean(true);
 

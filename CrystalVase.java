@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.*;
 
 public class CrystalVase {
   public static void main(String[] args) {
-    int nGuests = 10000;
+    int nGuests = 1000;
     int totalGuestsVisited = 0;
     final AtomicBoolean roomAvailable = new AtomicBoolean(true);
     CrystalGuest[] threads = new CrystalGuest[nGuests];
