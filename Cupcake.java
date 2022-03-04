@@ -14,26 +14,26 @@ public class Cupcake {
       threads[i].start();
     }
     long start = System.currentTimeMillis();
-    long masterThreadID = threads[0].getId();
     while (totalCakesEaten + 1 < nGuests) {
       Random r = new Random();
       int randomGuest = r.nextInt(nGuests);
       // send random guest to check cupcake
-      if (randomGuest == 50) {
-        if (threads[randomGuest].CheckCupcake(true, cupcakeIsThere, totalCakesEaten)) {
+      if (randomGuest == 0) {
+        if (threads[randomGuest].CheckCupcake(true, cupcakeIsThere)) {
           totalCakesEaten++;
         }
       }
       else {
-        threads[randomGuest].CheckCupcake(false, cupcakeIsThere, totalCakesEaten);
+        threads[randomGuest].CheckCupcake(false, cupcakeIsThere);
       }
-      System.out.println("The count is " + totalCakesEaten);
+      // System.out.println("The count is " + totalCakesEaten);
     }
+    System.out.println("Every guest has visited the labyrinth at least once");
   }
 }
 class CheckCupcake extends Thread {
   boolean eatenCupcake = false;
-  public boolean CheckCupcake(boolean masterThread, AtomicBoolean cupcakeIsThere, int totalCakesEaten) {
+  public boolean CheckCupcake(boolean masterThread, AtomicBoolean cupcakeIsThere) {
     // if master thread
     if (masterThread == true) {
       // if cupcake not there
