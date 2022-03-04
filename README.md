@@ -1,9 +1,9 @@
 # Minotaur_ParallelProgramming
 
-Problem 1:
+Problem 1:<br>
   My approach to solving this problem was based on the prisoner lightswitch problem presented in class. Similarly my program selects a master thread which keeps track of how many times the cupcake goes missing. All other threads are instructed to only eat the cupcake on their first visit. To check the validatiy of my results I increased the number of guests and witnessed an exponetial increase in runtime. This logic follows as there would be exponentially less chance of a new guest being selected each iteration as the amount of overall guests increases.
 
-Problem 2:
+Problem 2:<br>
   The best strategy for the threads to follow is a busy-wait queue aka. option 3. Since we have so many threads representing guests we should pick the startegy which leads to the least contention. With the other 2 methods as soon as the room is availble every guest would try to enter it leading to all the availble threads fighting for that 1 spot. One of the disadvantges of a queue based line is the complexity in setting up such a data structure.
   
   I choose to implement strategy 2 since in my opinion it was the most straight foward approach. Although strategy 3 stood out to me as the most efficent for parallel processing I was worried that I may code it incorrectly.
