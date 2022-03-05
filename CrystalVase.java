@@ -14,7 +14,6 @@ public class CrystalVase {
       threads[i] = new CrystalGuest();
       threads[i].start();
     }
-    long start = System.currentTimeMillis();
     while (totalGuestsVisited < nGuests) {
       Random r = new Random();
       int randomGuest = r.nextInt(nGuests);
@@ -26,7 +25,6 @@ public class CrystalVase {
       // System.out.println("The count is " + totalGuestsVisited);
     }
     System.out.println("Every guest has visited the crystal room at least once");
-    long end = System.currentTimeMillis();
   }
 }
 class CrystalGuest extends Thread {

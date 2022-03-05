@@ -15,7 +15,6 @@ public class Cupcake {
       threads[i] = new CheckCupcake();
       threads[i].start();
     }
-    long start = System.currentTimeMillis();
     while (totalCakesEaten + 1 < nGuests) {
       Random r = new Random();
       int randomGuest = r.nextInt(nGuests);
@@ -51,10 +50,8 @@ class CheckCupcake extends Thread {
       if (cupcakeIsThere.get() == true) {
         // if cupcake there check if this thread has eaten
         if (eatenCupcake == false) {
-          // lock cupcake
           cupcakeIsThere.compareAndSet(true, false);
           eatenCupcake = true;
-          // unlock cupcake
         }
       }
       return false;
