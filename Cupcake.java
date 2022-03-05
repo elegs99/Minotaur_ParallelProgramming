@@ -4,7 +4,9 @@ import java.util.concurrent.atomic.*;
 
 public class Cupcake {
   public static void main(String[] args) {
-    int nGuests = 10000;
+    Scanner scan = new Scanner(System.in);
+    System.out.print("How many guests: ");
+    int nGuests = scan.nextInt();
     int totalCakesEaten = 0;
     final AtomicBoolean cupcakeIsThere = new AtomicBoolean(true);
 
